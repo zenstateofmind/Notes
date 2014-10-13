@@ -1,11 +1,15 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf400
-{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\fnil\fcharset0 Consolas;}
-{\colortbl;\red255\green255\blue255;\red234\green234\blue234;\red231\green236\blue240;\red255\green255\blue255;
-\red231\green236\blue240;\red234\green234\blue234;}
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red234\green234\blue234;\red231\green236\blue240;}
 \margl1440\margr1440\vieww17140\viewh10000\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
-\f0\b\fs24 \cf0 __init__
+\f0\b\fs24 \cf0 Python notes\
+
+\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f1\b \cf0 __init__
 \b0  : This is basically like a constructor. \
 \
 
@@ -97,15 +101,15 @@ b = \{x for x in a if x not in 'abc'\}: This will return return a set b that con
 \
 
 \b Module: 
-\b0 \cb4 A module is a file containing Python definitions and statements.\
+\b0 A module is a file containing Python definitions and statements.\
 \pard\pardeftab720\sl400
-\cf0 Within a module, the module\'92s name (as a string) is available as the value of the global variable \cb5 __name__\cb1 \
-\cb4 The code in the module will be executed, just as if you imported it, but with the \cb5 __name__\cb4  set to \cb5 "__main__"\cb4 .\cb1 \
+\cf0 Within a module, the module\'92s name (as a string) is available as the value of the global variable \cb3 __name__\cb1 \
+The code in the module will be executed, just as if you imported it, but with the \cb3 __name__\cb1  set to \cb3 "__main__"\cb1 .\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 \cf0 \
 
 \b Classes: 
-\b0 \cb4 Python classes provide all the standard features of Object Oriented Programming: the class inheritance mechanism allows multiple base classes, a derived class can override any methods of its base class or classes, and a method can call the method of a base class with the same name. Objects can contain arbitrary amounts and kinds of data.\
+\b0 Python classes provide all the standard features of Object Oriented Programming: the class inheritance mechanism allows multiple base classes, a derived class can override any methods of its base class or classes, and a method can call the method of a base class with the same name. Objects can contain arbitrary amounts and kinds of data.\
 When a class implements __init__, as soon as you start create an instance of a classs, __init__ automatically gets called.\
 When you call a function of a class in python, you need to explicitly mention "self" as a parameter while coding out the function. \
 
@@ -141,9 +145,9 @@ Class inheritance is allowed. This is done by calling the class names in bracket
 
 \b Random python caveats: 
 \b0\fs28 You use 
-\f1 \cb6 ==
-\f0 \cb4  when comparing values and 
-\f1 \cb6 is
-\f0 \cb4  when comparing identities.
+\f0 \cb2 ==
+\f1 \cb1  when comparing values and 
+\f0 \cb2 is
+\f1 \cb1  when comparing identities.
 \fs24 \
 }
