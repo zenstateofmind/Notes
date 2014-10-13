@@ -1,0 +1,149 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\fnil\fcharset0 Consolas;}
+{\colortbl;\red255\green255\blue255;\red234\green234\blue234;\red231\green236\blue240;\red255\green255\blue255;
+\red231\green236\blue240;\red234\green234\blue234;}
+\margl1440\margr1440\vieww17140\viewh10000\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs24 \cf0 __init__
+\b0  : This is basically like a constructor. \
+\
+
+\b self
+\b0 : the \cb2 self\cb1  variable represents the instance of the object itself. Most object-oriented languages pass this as a hidden parameter to the methods defined on an object; Python does not. You have to declare it explicitly\
+\
+
+\b PMF
+\b0 : Probability mass function: Probability that a random variable will be a discrete value. \
+\
+
+\b To call class from different file this is the code
+\b0 : from file import className\
+\
+
+\b To call functions from different files
+\b0 : 'import file' and then 'file.FuncName()'\
+\
+
+\b Lists
+\b0 : This is the data structure where a lot of magic can be done. You can have elements in the data structure of different data types. For ex: list = ['a', 2, 3]\
+\
+
+\b Functions: 
+\b0 You can have default values in function parameters. For example:\
+def hello(crap, look = 'look at me')\
+\
+When your function is taking in parameters, lets say two ints: def check(i, j). Now if you want to feed in stuff into this from a list hello[1, 2], then you need to do check(*hello). This basically means that parameters fed into check will be the ints that are *in* the list. \cb3 *\cb1 -operator to unpack the arguments out of a list or tuple. You can also have a dictionary with the parameters and their values and pass that in into the function as a parameter. In this case, it would be a **\
+\
+Lists can be used as stacks or queues: Its of the type [bla, 1, bla]. It has the following methods: append, extend, insert, remove, pop, index, count(x): number of times x appears in the list, sort(cpm, key, false), reverse. \
+\
+
+\b Functional
+\b0 : On lists, you can run filter(function, sequence), map(function, sequence), map(function, sequence, sequence) and reduce(function, sequence). Sequence here represents a list\
+For example: \
+
+\b filter: \
+
+\b0 def f(x): return x%2 == 0\
+filter(f, range(1, 13)). This would return [2, 4, 6, 8, 10, 12]\
+
+\b map:\
+
+\b0 def f(x): return x*x*x\
+map(f, range(1, 3)). This would return [1, 8]\
+A map can also take 2 parameters. In that case, the function would have to take in two values.\
+def f(x, y): return x+y\
+map(f, range(1, 3), range(2, 4)). This would return [3, 5]
+\b \
+reduce:\
+
+\b0 def f(x, y): return x+y\
+reduce(f, range(1, 6)). This would just take in two values the first time from the list, and then just take in one value from the list and add that to the sum\
+\
+
+\b Lambda: 
+\b0 Inline function. Instead of having def f(x): return x*2, you can have lambda x: x*2\
+\
+
+\b List comprehension: 
+\b0 Concise way to create lists. Works if you want apply a certain operation and each and every element of a list. \
+For example: [x*2 for x in range(10)] -> This would multiply 2 with every number from the list and then output that.\
+Flattening: vec = [[1, 2], [3, 4], [5, 6]]\
+[num for element in vec for num in element]\
+\
+
+\b Tuples: 
+\b0 They are immutable. Lists are mutable. Always have round brackets. Like t = (1, 2, 3)\
+If you want to have a 1 item tuple, then you do something like: t = 123, . Notice the comma at the end. \
+Lets say we have something like: tup = (1, 2, 3). We can 
+\i unpack
+\i0  these by doing: x, y z = tup. This will assign 1 to x, 2 to y and 3 to z\
+\
+
+\b Sets: 
+\b0 Used for membership testing and eliminating duplicate entries. Sets can't have duplicate entries. To create an empty set, use set(), not \{ \}\'85 that creates an empty dictionary. \
+basket = ['shit', 'wow', 'shit']\
+setCheck = set(basket)\
+setCheck will print set(['wow', 'shit'])\
+You can do stuff like union, intersection and what not.\
+a | b = a or b\'85 in other words a union b\
+a & b = a intersection b. Stuff thats in both and b\
+a - b = stuff thats in a and not in b\
+a ^ b = stuff thats in a or b but not both\
+\
+Even on sets, you can do list comprehensions. \
+lets say we have a = set('abracadabra')\
+b = \{x for x in a if x not in 'abc'\}: This will return return a set b that contains all the letters in abracadabra that arent in 'abc'\
+\
+
+\b Module: 
+\b0 \cb4 A module is a file containing Python definitions and statements.\
+\pard\pardeftab720\sl400
+\cf0 Within a module, the module\'92s name (as a string) is available as the value of the global variable \cb5 __name__\cb1 \
+\cb4 The code in the module will be executed, just as if you imported it, but with the \cb5 __name__\cb4  set to \cb5 "__main__"\cb4 .\cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+
+\b Classes: 
+\b0 \cb4 Python classes provide all the standard features of Object Oriented Programming: the class inheritance mechanism allows multiple base classes, a derived class can override any methods of its base class or classes, and a method can call the method of a base class with the same name. Objects can contain arbitrary amounts and kinds of data.\
+When a class implements __init__, as soon as you start create an instance of a classs, __init__ automatically gets called.\
+When you call a function of a class in python, you need to explicitly mention "self" as a parameter while coding out the function. \
+
+\i This is dangerous:\
+
+\i0 Lets say there is something like this:\
+class Dog:\
+	tricks = [ ]\
+	\
+	def __init__(self, name):\
+		self.name = name\
+\
+	def add_trick (self, trick):\
+		self.trick.append(trick)\
+\
+Now, lets say you do:\
+d = Dog('Fido')\
+e = Dog('Buddy')\
+d.add_trick('roll over')\
+e.add_trick('play dead')\
+d.tricks will say ['roll over', 'play dead']\
+\
+This is because class variables are shared by 
+\i all 
+\i0 instances. So when data structures are mutable such as a list or a dictionary, this can result in surprising effects. To prevent this, basically what to do is initialize tricks as self.tricks in __init__ rather than as a class variable. \
+\
+Class inheritance is allowed. This is done by calling the class names in brackets while creating a new class\'85 like this: class DerivedClassName(BaseClassName). Derived classes may override methods of their base classes.\
+\
+
+\b Namespace: 
+\b0 Mapping from names to objects. Important thing to know about namespaces is that there is absolutely no relation between names in different namespaces; for instance, two different modules may both define a function maximize without confusion - users of modules must prefix it with the module name\
+\
+
+\b Random python caveats: 
+\b0\fs28 You use 
+\f1 \cb6 ==
+\f0 \cb4  when comparing values and 
+\f1 \cb6 is
+\f0 \cb4  when comparing identities.
+\fs24 \
+}
